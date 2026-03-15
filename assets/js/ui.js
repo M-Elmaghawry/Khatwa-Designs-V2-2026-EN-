@@ -126,18 +126,65 @@ export function initTestimonialSlider(itemsCount) {
   }
 
   let index = 0;
+  let itemsPerView = getItemsPerView();
 
   const goTo = (newIndex) => {
-    index = (newIndex + itemsCount) % itemsCount;
-    track.style.transform = `translateX(-${index * 100}%)`;
+    const maxIndex = Math.max(itemsCount - itemsPerView, 0);
+    if (newIndex < 0) {
+      index = maxIndex;
+    } else if (newIndex > maxIndex) {
+      index = 0;
+    } else {
+      index = newIndex;
+    }
+
+    const firstCard = track.querySelector(".testimonial-item");
+    if (!firstCard) {
+      return;
+    }
+
+    const styles = window.getComputedStyle(track);
+    const gap = Number.parseFloat(styles.gap || "0") || 0;
+    const stepWidth = firstCard.getBoundingClientRect().width + gap;
+    track.style.transform = `translateX(-${index * stepWidth}px)`;
+  };
+
+  const syncResponsiveState = () => {
+    itemsPerView = getItemsPerView();
+    const maxIndex = Math.max(itemsCount - itemsPerView, 0);
+    if (index > maxIndex) {
+      index = maxIndex;
+    }
+
+    const hasOverflow = maxIndex > 0;
+    prev.disabled = !hasOverflow;
+    next.disabled = !hasOverflow;
+    goTo(index);
   };
 
   prev.addEventListener("click", () => goTo(index - 1));
   next.addEventListener("click", () => goTo(index + 1));
 
+  window.addEventListener("resize", syncResponsiveState);
+  syncResponsiveState();
+
   setInterval(() => {
-    goTo(index + 1);
+    if (Math.max(itemsCount - itemsPerView, 0) > 0) {
+      goTo(index + 1);
+    }
   }, 5500);
+}
+
+function getItemsPerView() {
+  if (window.innerWidth <= 768) {
+    return 1;
+  }
+
+  if (window.innerWidth <= 1024) {
+    return 2;
+  }
+
+  return 3;
 }
 
 export function applySiteSettings(siteData) {
@@ -148,7 +195,7 @@ export function applySiteSettings(siteData) {
     subtitle.textContent = siteData.heroSubtitle;
   }
 
-  if (copyright && siteData.copyright) {
+  if (copyright && siteData.copyright && copyright.children.length === 0) {
     copyright.textContent = siteData.copyright;
   }
 }

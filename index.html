@@ -10,14 +10,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header" id="home">
     <div class="container nav-wrap">
-      <a href="#home" class="logo" aria-label="Khatwa Design Home">
-        <span class="logo-mark">K</span>
-        <span class="logo-text">Khatwa Design</span>
+      <a href="#top" class="logo" aria-label="Khatwa Design Home">
+        <img
+          class="header-logo-image"
+          src="assets/images/Khatwa-Designs.png"
+          alt="Khatwa Designs logo"
+          width="2048"
+          height="512"
+          decoding="async"
+        />
       </a>
 
       <nav class="site-nav" aria-label="Main navigation">
@@ -32,7 +38,7 @@
         </ul>
       </nav>
 
-      <a href="#contact" class="btn btn-primary header-cta" aria-label="Start your project">Start Your Project</a>
+      <a href="https://api.whatsapp.com/send?phone=201096189832" target="_blank" rel="noopener" class="btn btn-primary header-cta" aria-label="Start your project on WhatsApp">Start Your Project</a>
     </div>
   </header>
 
@@ -250,7 +256,17 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p id="copyright-line">&copy; 2026 Khatwa Design. All rights reserved.</p>
+      <p id="copyright-line">
+        &copy; 2026
+        <a
+          class="copyright-brand"
+          href="https://www.behance.net/khatwadesigns2"
+          target="_blank"
+          rel="noopener"
+          aria-label="Open Khatwa Designs Behance profile in a new tab"
+        >Khatwa Designs</a>.
+        All rights reserved. Designed with <span class="yellow-heart" aria-hidden="true">&#10084;</span>
+      </p>
     </div>
   </footer>
 
