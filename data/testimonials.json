@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Sarah Mahmoud",
+    "company": "Marketing Director, Visionary",
+    "rating": 5,
+    "text": "Khatwa Design transformed our identity into a modern, premium brand system that customers instantly recognized."
+  },
+  {
+    "name": "Omar Elsayed",
+    "company": "Founder, PixelNest",
+    "rating": 5,
+    "text": "The UI/UX quality was exceptional and the delivery pace was impressive. Our product adoption improved right after launch."
+  },
+  {
+    "name": "Lina Kareem",
+    "company": "Brand Manager, NexaCorp",
+    "rating": 4,
+    "text": "From strategy to visual execution, the team was collaborative and deeply understood our business goals."
+  },
+  {
+    "name": "Hany Adel",
+    "company": "CEO, Northlane",
+    "rating": 5,
+    "text": "Their motion and campaign assets lifted our social engagement and made our launch campaign stand out."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Noura Beauty Rebrand",
+    "category": "Brand Identity",
+    "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?fm=webp&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Finora Banking App",
+    "category": "UI/UX Design",
+    "image": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?fm=webp&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Summit Social Campaign",
+    "category": "Social Media",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?fm=webp&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Horizon Real Estate Site",
+    "category": "Web Design",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=webp&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Orbit Product Motion",
+    "category": "Motion Graphics",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?fm=webp&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Luma Coffee Packaging",
+    "category": "Logo & Packaging",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?fm=webp&auto=format&fit=crop&w=1200&q=80"
+  }
+]
