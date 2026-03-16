@@ -1,5 +1,6 @@
 import { loadAllData } from "./data-loader.js";
-import { initCounters, initScrollAnimations } from "./animations.js";
+import { initScrollAnimations } from "./animations.js";
+import { initStatsCounter } from "./stats-counter.js";
 import {
   applySiteSettings,
   initMobileNav,
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initTestimonialSlider(testimonials.length);
 
     initScrollAnimations();
-    initCounters();
+    initStatsCounter();
 
     initEmailJs(site.emailjs || {});
     initContactForm(site.emailjs || {});
