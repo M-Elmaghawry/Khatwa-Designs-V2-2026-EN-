@@ -156,7 +156,8 @@ export function initTestimonialSlider(itemsCount) {
 
     const styles = window.getComputedStyle(track);
     const gap = Number.parseFloat(styles.gap || "0") || 0;
-    const stepWidth = firstCard.getBoundingClientRect().width + gap;
+    const cardWidth = Number.parseFloat(window.getComputedStyle(firstCard).width) || firstCard.offsetWidth;
+    const stepWidth = cardWidth + gap;
     track.style.transform = `translateX(-${index * stepWidth}px)`;
     
     updateActiveState();
