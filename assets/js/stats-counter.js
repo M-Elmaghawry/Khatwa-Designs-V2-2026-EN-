@@ -5,7 +5,7 @@ export function initStatsCounter(options = {}) {
     sectionSelector: ".stats",
     counterSelector: ".counter",
     duration: 1500,
-    stagger: 120,
+    stagger: 150,
     threshold: 0.35,
     ...options
   };
@@ -85,7 +85,13 @@ function animateCounter(counterElement, duration) {
     const eased = easeOutCubic(progress);
     const current = Math.round(target * eased);
 
+    // Apply scale and opacity animations
+    const scale = 0.9 + eased * 0.1;
+    const opacity = eased;
+
     counterElement.textContent = `${formatNumber(current)}${suffix}`;
+    counterElement.style.transform = `scale(${scale})`;
+    counterElement.style.opacity = opacity;
 
     if (progress < 1) {
       requestAnimationFrame(step);
@@ -93,6 +99,8 @@ function animateCounter(counterElement, duration) {
     }
 
     counterElement.textContent = `${formatNumber(target)}${suffix}`;
+    counterElement.style.transform = "scale(1)";
+    counterElement.style.opacity = "1";
   };
 
   requestAnimationFrame(step);

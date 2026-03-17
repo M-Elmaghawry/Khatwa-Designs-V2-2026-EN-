@@ -1,26 +1,112 @@
 [
   {
-    "name": "Sarah Mahmoud",
-    "company": "Marketing Director, Visionary",
+    "id": 1,
+    "name": "Mahmoud Ali Saleh",
+    "company": "Technology Startup",
+    "position": "CEO & Founder",
+    "text": "One of the best companies I've dealt with for design and video editing services. Honestly, they're very knowledgeable and have extensive experience in the field.",
     "rating": 5,
-    "text": "Khatwa Design transformed our identity into a modern, premium brand system that customers instantly recognized."
+    "avatar": "avatar-1",
+    "avatarAlt": "Mahmoud Ali Saleh profile picture"
   },
   {
-    "name": "Omar Elsayed",
-    "company": "Founder, PixelNest",
+    "id": 2,
+    "name": "Mahmoud Elsayed ",
+    "company": "E-Commerce Brand",
+    "position": "Marketing Director",
+    "text": "Honestly, these people understand their jobs very well and are committed to their deadlines.",
     "rating": 5,
-    "text": "The UI/UX quality was exceptional and the delivery pace was impressive. Our product adoption improved right after launch."
+    "avatar": "avatar-2",
+    "avatarAlt": "Mahmoud Elsayed profile picture"
   },
   {
-    "name": "Lina Kareem",
-    "company": "Brand Manager, NexaCorp",
-    "rating": 4,
-    "text": "From strategy to visual execution, the team was collaborative and deeply understood our business goals."
+    "id": 3,
+    "name": "Amira Hassan",
+    "company": "Digital Agency",
+    "position": "E-Commerce Brand",
+    "text": "Very professional people and highly recommended, they have a great team and are very responsive to our needs.",
+    "rating": 5,
+    "avatar": "avatar-3",
+    "avatarAlt": "Amira Hassan profile picture"
   },
   {
-    "name": "Hany Adel",
-    "company": "CEO, Northlane",
+    "id": 4,
+    "name": "Gehad Mohamed Amin",
+    "company": "Tech Solutions",
+    "position": "E-Commerce Brand",
+    "text": "Seriously, thank you so much for the beautiful design.",
     "rating": 5,
-    "text": "Their motion and campaign assets lifted our social engagement and made our launch campaign stand out."
+    "avatar": "avatar-4",
+    "avatarAlt": "Gehad Mohamed Amin profile picture"
+  },
+  {
+    "id": 5,
+    "name": "Aya Fathy",
+    "company": "Tech Solutions",
+    "position": "E-Commerce Brand",
+    "text": "Excellent work, completed very quickly. Thank you, and this won't be the last time I deal with you, God willing.",
+    "rating": 5,
+    "avatar": "avatar-5",
+    "avatarAlt": "Aya Fathy profile picture"
+  },
+  {
+    "id": 6,
+    "name": "Walaa Elshaboury",
+    "company": "Tech Solutions",
+    "position": "E-Commerce Brand",
+    "text": "Thank you for the design and your excellent taste. Best of luck!",
+    "rating": 5,
+    "avatar": "avatar-6",
+    "avatarAlt": "Walaa Elshaboury profile picture"
+  },
+  {
+    "id": 7,
+    "name": "Farida Gerges",
+    "company": "Tech Solutions",
+    "position": "E-Commerce Brand",
+    "text": "One of the best companies in my field. Creative and professional in logos and videos. First time working with them, and definitely not the last. Best of luck!",
+    "rating": 5,
+    "avatar": "avatar-7",
+    "avatarAlt": "Farida Gerges profile picture"
+  },
+  {
+    "id": 8,
+    "name": "Amr Ahmed Atallah",
+    "company": "Tech Solutions",
+    "position": "Product Manager",
+    "text": "Honestly, you guys are incredibly talented, and I've never seen anyone like you before, whether in your ethics or your manners.",
+    "rating": 5,
+    "avatar": "avatar-8",
+    "avatarAlt": "Amr Ahmed Atallah profile picture"
+  },
+  {
+    "id": 9,
+    "name": "Hesham Mohmed ",
+    "company": "Tech Solutions",
+    "position": "Product Manager",
+    "text": "One of the best companies you can deal with; you understand them well and feel very comfortable with them. Thank you for your kindness.",
+    "rating": 5,
+    "avatar": "avatar-9",
+    "avatarAlt": "Hesham Mohmed profile picture"
+  },
+  {
+    "id": 10,
+    "name": "Mahmoud Hussein Shafik",
+    "company": "Tech Solutions",
+    "position": "Product Manager",
+    "text": "May God grant you success and bless you, Engineer. And may you continue to achieve success after success, God willing.",
+    "rating": 5,
+    "avatar": "avatar-10",
+    "avatarAlt": "Mahmoud Hussein Shafik profile picture"
+  },
+  {
+    "id": 11,
+    "name": "Mohamed Ibrahim",
+    "company": "Tech Solutions",
+    "position": "Product Manager",
+    "text": "They are among the best companies in their field, creative and professional.",
+    "rating": 5,
+    "avatar": "avatar-11",
+    "avatarAlt": "Mohamed Ibrahim profile picture"
   }
 ]

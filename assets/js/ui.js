@@ -87,7 +87,7 @@ export function renderTestimonials(testimonials) {
           <div class="testimonial-meta">
             <div>
               <strong>${item.name}</strong>
-              <div>${item.company}</div>
+              <div>${item.position || item.company}</div>
             </div>
             <div class="stars" aria-label="${item.rating} out of 5 stars">${"★".repeat(item.rating)}${"☆".repeat(5 - item.rating)}</div>
           </div>
@@ -121,12 +121,23 @@ export function initTestimonialSlider(itemsCount) {
   const track = document.getElementById("testimonial-track");
   const prev = document.getElementById("testimonial-prev");
   const next = document.getElementById("testimonial-next");
+  const slider = document.getElementById("testimonial-slider");
+  
   if (!track || !prev || !next || itemsCount < 2) {
     return;
   }
 
   let index = 0;
   let itemsPerView = getItemsPerView();
+  let autoplayInterval = null;
+  let isHovering = false;
+
+  const updateActiveState = () => {
+    const items = track.querySelectorAll(".testimonial-item");
+    items.forEach((item, i) => {
+      item.classList.toggle("active", i === index);
+    });
+  };
 
   const goTo = (newIndex) => {
     const maxIndex = Math.max(itemsCount - itemsPerView, 0);
@@ -147,6 +158,8 @@ export function initTestimonialSlider(itemsCount) {
     const gap = Number.parseFloat(styles.gap || "0") || 0;
     const stepWidth = firstCard.getBoundingClientRect().width + gap;
     track.style.transform = `translateX(-${index * stepWidth}px)`;
+    
+    updateActiveState();
   };
 
   const syncResponsiveState = () => {
@@ -162,17 +175,53 @@ export function initTestimonialSlider(itemsCount) {
     goTo(index);
   };
 
-  prev.addEventListener("click", () => goTo(index - 1));
-  next.addEventListener("click", () => goTo(index + 1));
+  const startAutoplay = () => {
+    if (autoplayInterval) {
+      clearInterval(autoplayInterval);
+    }
+    autoplayInterval = setInterval(() => {
+      if (!isHovering && Math.max(itemsCount - itemsPerView, 0) > 0) {
+        goTo(index + 1);
+      }
+    }, 5000);
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayInterval) {
+      clearInterval(autoplayInterval);
+      autoplayInterval = null;
+    }
+  };
+
+  // Event listeners
+  prev.addEventListener("click", () => {
+    goTo(index - 1);
+    stopAutoplay();
+    startAutoplay();
+  });
+
+  next.addEventListener("click", () => {
+    goTo(index + 1);
+    stopAutoplay();
+    startAutoplay();
+  });
+
+  // Pause on hover
+  if (slider) {
+    slider.addEventListener("mouseenter", () => {
+      isHovering = true;
+      stopAutoplay();
+    });
+
+    slider.addEventListener("mouseleave", () => {
+      isHovering = false;
+      startAutoplay();
+    });
+  }
 
   window.addEventListener("resize", syncResponsiveState);
   syncResponsiveState();
-
-  setInterval(() => {
-    if (Math.max(itemsCount - itemsPerView, 0) > 0) {
-      goTo(index + 1);
-    }
-  }, 5500);
+  startAutoplay();
 }
 
 function getItemsPerView() {
