@@ -2,8 +2,11 @@
   "heroSubtitle": "Khatwa Design builds creative systems that connect story, strategy, and digital experience to help brands grow with confidence.",
   "copyright": "© 2026 Khatwa Design. All rights reserved.",
   "emailjs": {
-    "publicKey": "YOUR_EMAILJS_PUBLIC_KEY",
-    "serviceId": "YOUR_EMAILJS_SERVICE_ID",
-    "templateId": "YOUR_EMAILJS_TEMPLATE_ID"
+    "publicKey": "UdJErrWWJNphl0QbO",
+    "serviceId": "service_pzjv8g8",
+    "templateId": "template_nhgwlgj",
+    "toEmail": "khatwadesigns@gmail.com",
+    "successMessage": "Thank you! Your message has been sent successfully.",
+    "errorMessage": "Sorry, your message could not be sent right now. Please try again."
   }
 }
