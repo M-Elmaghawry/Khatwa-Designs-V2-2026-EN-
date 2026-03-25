@@ -41,7 +41,9 @@ export function renderPortfolio(projects) {
     .map(
       (project) => `
         <article class="project-card" data-animate="zoom-in">
-          <img src="${project.image}" alt="${project.title}" width="900" height="600" loading="lazy" decoding="async" />
+          <a href="${project.behanceUrl || '#'}" target="_blank" rel="noopener noreferrer" aria-label="View ${project.title} on Behance">
+            <img src="${project.image}" alt="${project.title}" width="900" height="600" loading="lazy" decoding="async" />
+          </a>
           <div class="project-overlay">
             <span class="project-chip">${project.category}</span>
             <h3>${project.title}</h3>
